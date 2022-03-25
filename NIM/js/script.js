@@ -37,7 +37,7 @@ var nb=0;
       var elmt=Byid(id);
       var createtd=document.createElement("td");
       var i=document.createElement("IMG");
-      i.setAttribute("src", "images/allumette.jpg");
+      i.setAttribute("src", "images/hhpalito.gif");
       i.setAttribute("alt","allumette");
       createtd.appendChild(i);
       elmt.appendChild(createtd);
@@ -45,7 +45,7 @@ var nb=0;
 
     function insereButton(idb){
       var elmt=Byid(idb);
-      elmt.innerHTML="<p><button type='button' onclick='enlever(nbAllumEnlev)'>Enlever</button> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> allumette(s)</label><span id='error2'></span></p><p id='reste'></p>"
+      elmt.innerHTML="<p><button type='button' onclick='enlever(nbAllumEnlev)'>Remover</button> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> partidas(s)</label><span id='error2'></span></p><p id='reste'></p>"
     }
 
 

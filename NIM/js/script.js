@@ -23,8 +23,8 @@ var nb=0;
         for (var i=0; i<nb;i++){
           insereimg(id);
         }
-        ElmtJoueur=Byid("jogador");
-        joueur.textContent="Jogador 1 joga";
+        ElmtJoueur=Byid("joueur");
+        joueur.textContent="Vez do jogador 1";
         joueur.style.color="#F91C80";
         jeu=true;
         insereButton(id2);
@@ -65,9 +65,9 @@ var nb=0;
         error2.textContent="";
         jeu=!jeu;
           if (jeu==true) {
-            joueur.textContent="Jogador 1 joga";
+            joueur.textContent="Vez do jogador 1";
           }else{
-            joueur.textContent="Jogador 2 joga";
+            joueur.textContent="Vez do jogador 2";
           }
           for (var i=nbAllumEnlev-1; i>=0;i--){
             elmtfeu.removeChild(elmtfeu.childNodes[i]);
@@ -75,7 +75,7 @@ var nb=0;
           nb=nb-nbAllumEnlev;
       }
 
-      ElmtReste.textContent="Ele fica "+nb+" partida(s) para jogar.";
+      ElmtReste.textContent="Falta "+nb+" rodadas.";
       document.getElementById("nbAllumEnlev").value="";
 
       if(nb===0){ 

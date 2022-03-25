@@ -25,7 +25,7 @@ var nb=0;
         }
         ElmtJoueur=Byid("joueur");
         joueur.textContent="Vez do jogador 1";
-        joueur.style.color="#F91C80";
+        joueur.style.color="#E3371E";
         jeu=true;
         insereButton(id2);
         document.getElementById("nb").value="";
@@ -37,7 +37,7 @@ var nb=0;
       var elmt=Byid(id);
       var createtd=document.createElement("td");
       var i=document.createElement("IMG");
-      i.setAttribute("src", "images/hhpalito.gif");
+      i.setAttribute("src", "images/allumette.jpg");
       i.setAttribute("alt","allumette");
       createtd.appendChild(i);
       elmt.appendChild(createtd);
@@ -83,10 +83,10 @@ var nb=0;
         jeu=!jeu;
         if (jeu==true) {
             joueur.textContent="Jogador 1 vence";
-            joueur.style.color="#2E76FF";
+            joueur.style.color="#E3371E";
           }else{
             joueur.textContent="Jogador 2 vence";
-            joueur.style.color="#2E76FF";
+            joueur.style.color="#E3371E";
           }
         var i=document.createElement("IMG");
         i.setAttribute("src", "images/ganhar.jpg");
@@ -94,7 +94,7 @@ var nb=0;
         elmtfeu.appendChild(i);
 
         error2.textContent=" ***** O jogo acabou. *****";
-          error2.style.color="#2E76FF";
+          error2.style.color="#E3371E";
       }
 
     }

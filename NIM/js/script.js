@@ -45,7 +45,7 @@ var nb=0;
 
     function insereButton(idb){
       var elmt=Byid(idb);
-      elmt.innerHTML="<p><button type='button' onclick='enlever(nbAllumEnlev)'>Remover</button> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> partidas(s)</label><span id='error2'></span></p><p id='reste'></p>"
+      elmt.innerHTML="<p><button type='button' class='button' onclick='enlever(nbAllumEnlev)'>Remover</button> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> partidas(s)</label><span id='error2'></span></p><p id='reste'></p>"
     }
 
 

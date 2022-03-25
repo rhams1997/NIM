@@ -89,7 +89,7 @@ var nb=0;
             joueur.style.color="#2E76FF";
           }
         var i=document.createElement("IMG");
-        i.setAttribute("src", "images/7oqt0qq2.gif");
+        i.setAttribute("src", "images/ganhar.jpg");
         i.setAttribute("alt","gagné");
         elmtfeu.appendChild(i);
 

@@ -5,14 +5,14 @@ var nb=0;
       return document.getElementById(id);
     }
 
-    function valuede(id){
+    function valorDe(id){
       return Byid(id).value;
     }
 
     function flam(id,id2,id3){
       var elmtfeu=Byid(id);
       var error1=Byid("error1");
-      nb=valuede(id3);
+      nb=valorDe(id3);
       
       if(nb<=3 || isNaN(nb)){
         error1.innerHTML="Digite um número maior que 3";
@@ -46,20 +46,20 @@ var nb=0;
 
     function insereButton(idb){
       var elmt=Byid(idb);
-      elmt.innerHTML="<p> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> palito(s)</label><span id='error2'></span><button type='button' class='button' onclick='enlever(nbAllumEnlev)'>Remover</button></p><p id='reste'></p>"
+      elmt.innerHTML="<p> <input type='text' id='buttonplay' name='buttonplay' size='5' value=''/><label> palito(s)</label><span id='error2'></span><button type='button' class='button' onclick='enlever(buttonplay)'>Remover</button></p><p id='reste'></p>"
     }
 
 
     function enlever(nb2){
       var elmtfeu=Byid("trfeu");
-      var nbAllumEnlev=parseInt(valuede("nbAllumEnlev"));
+      var buttonplay=parseInt(valorDe("buttonplay"));
       var ElmtReste=Byid("reste");
             
-      if(nbAllumEnlev>3 || nbAllumEnlev<=0 || isNaN(nbAllumEnlev)){
+      if(buttonplay>3 || buttonplay<=0 || isNaN(buttonplay)){
         error2=Byid("error2");
         error2.textContent=" Insira um número entre 0 e 3 e menor que o número de correspondências restantes : "+nb;
         error2.style.color="red";
-      }else if (nbAllumEnlev>nb){
+      }else if (buttonplay>nb){
         error2.textContent=" Insira um número menor que o número de correspondências restantes : "+nb;
         error2.style.color="red";
       }else{
@@ -74,14 +74,14 @@ var nb=0;
             jogador.style.color="#5eeb00";
             jogador.style.fontSize="20px";
           }
-          for (var i=nbAllumEnlev-1; i>=0;i--){
+          for (var i=buttonplay-1; i>=0;i--){
             elmtfeu.removeChild(elmtfeu.childNodes[i]);
           } 
-          nb=nb-nbAllumEnlev;
+          nb=nb-buttonplay;
       }
 
       ElmtReste.textContent="Falta "+nb+" rodadas.";
-      document.getElementById("nbAllumEnlev").value="";
+      document.getElementById("buttonplay").value="";
 
       if(nb===0){ 
         jogador.textContent="";

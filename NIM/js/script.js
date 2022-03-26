@@ -1,5 +1,5 @@
 var nb=0;
-  var jeu=true;
+  var jogo=true;
 
     function Byid(id){
       return document.getElementById(id);
@@ -23,10 +23,11 @@ var nb=0;
         for (var i=0; i<nb;i++){
           insereimg(id);
         }
-        ElmtJoueur=Byid("joueur");
-        joueur.textContent="Vez do jogador 1";
-        joueur.style.color="#E3371E";
-        jeu=true;
+        ElmtJoueur=Byid("jogador");
+        jogador.textContent="Vez do jogador 1";
+        jogador.style.color="#1354aa";
+        jogador.style.fontSize="20px";
+        jogo=true;
         insereButton(id2);
         document.getElementById("nb").value="";
       }
@@ -45,7 +46,7 @@ var nb=0;
 
     function insereButton(idb){
       var elmt=Byid(idb);
-      elmt.innerHTML="<p><button type='button' class='button' onclick='enlever(nbAllumEnlev)'>Remover</button> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> partidas(s)</label><span id='error2'></span></p><p id='reste'></p>"
+      elmt.innerHTML="<p> <input type='text' id='nbAllumEnlev' name='nbAllumEnlev' size='5' value=''/><label> palito(s)</label><span id='error2'></span><button type='button' class='button' onclick='enlever(nbAllumEnlev)'>Remover</button></p><p id='reste'></p>"
     }
 
 
@@ -63,11 +64,15 @@ var nb=0;
         error2.style.color="red";
       }else{
         error2.textContent="";
-        jeu=!jeu;
-          if (jeu==true) {
-            joueur.textContent="Vez do jogador 1";
+        jogo=!jogo;
+          if (jogo==true) {
+            jogador.textContent="Vez do jogador 1";
+            jogador.style.color="#1354aa";
+            jogador.style.fontSize="20px";
           }else{
-            joueur.textContent="Vez do jogador 2";
+            jogador.textContent="Vez do jogador 2";
+            jogador.style.color="#5eeb00";
+            jogador.style.fontSize="20px";
           }
           for (var i=nbAllumEnlev-1; i>=0;i--){
             elmtfeu.removeChild(elmtfeu.childNodes[i]);
@@ -79,14 +84,14 @@ var nb=0;
       document.getElementById("nbAllumEnlev").value="";
 
       if(nb===0){ 
-        joueur.textContent="";
-        jeu=!jeu;
-        if (jeu==true) {
-            joueur.textContent="Jogador 1 vence";
-            joueur.style.color="#E3371E";
+        jogador.textContent="";
+        jogo=!jogo;
+        if (jogo==true) {
+            jogador.textContent="Jogador 1 vence";
+            jogador.style.color="#1354aa";
           }else{
-            joueur.textContent="Jogador 2 vence";
-            joueur.style.color="#E3371E";
+            jogador.textContent="Jogador 2 vence";
+            jogador.style.color="#5eeb00";
           }
         var i=document.createElement("IMG");
         i.setAttribute("src", "images/ganhar.jpg");
